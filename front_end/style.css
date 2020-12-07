@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1{
+	text-align: center;
+	font-family: 'Staatliches', cursive;
+  	font-size: 50px;
+	color: #FFFFFF;
+	margin:0;
+  padding:15px;
+	background-color: black;
+}
+
+body{
+	background-color: #000000;
+	font-family: 'Staatliches', cursive;
+	margin:0;
+  padding:15px;
+}
+
+li {
+  float: left;
+}
+
+#queryForm{
+	text-align: center;
+}
+
+.btn{
+	color: burlywood;
+	text-align: center;
+	text-color: #FFFFFF;
+	margin:0;
+  padding:15px;
+}
+
+.btn:hover{
+	background: #FF171B;
+ 	color: #F6F6F6;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+	<script src="app_code_dev.js"></script>
+	<link href="style.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+	
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+<body>
+	<h1> Search Class Options Using The Following  </h1>
+	<br>
+	<br>
+	<br>
+<form onSubmit="return false;" id="queryForm">
+		<label for="codeQuery"> Search by code:</label>
+  <input type="text" id="codeQuery" name="codeQuery" value=""><br>
+  <input id="queryByCode" class="btn" type="button" onClick="updateView(this)" value="Submit" data-querytype="by_code">
+		<hr>
+		<label for="titleQuery"> Search by title:</label>
+  <input type="text" id="titleQuery" name="titleQuery" value=""><br>
+  <input id="queryByTitle" class="btn" type="button" onClick="updateView(this)" value="Submit" data-querytype="by_title">	
+		<hr>
+  		<label for="instructorQuery"> Search by instructor:</label>
+  <input type="text" id="instuctorQuery" name="instuctorQuery" value=""><br>
+  <input id="queryByInstuctor" class="btn" type="button" onClick="updateView(this)" value="Submit" data-querytype="by_instuctor">
+		<hr>
+	    <label for="levelQuery"> Search by level:</label>
+  <input type="text" id="levelQuery" name="levelQuery" value=""><br>
+  <input id="queryByLevel" class="btn" type="button" onClick="updateView(this)" value="Submit" data-querytype="by_level">    
+		<hr>
+		<label for="combinedQuery"> Search by instructor and level:</label>
+  <input type="text" id="nameQuery" name="nameQuery" value=""><br>
+  <input type="text" id="level2Query" name="level2Query" value=""><br>
+  <input id="queryByCombined" class="btn" type="button" onClick="updateView(this)" value="Submit" data-querytype="combined_query">   
+	</form>
+	<div id="results">	
+	</div>
+</body>
+</html>
+
+<script id="show_results_view" type="text/x-handlebars-template">
+	<ul class = "data_list">
+		{{#each data}}
+		<li> Course Code:{{this.course_code}} | Level: {{this.course_level}} | Title: {{this.title}} | Instuctor: {{this.instuctor}}</li>
+		{{/each}}
+	</ul>
+</script>
+
+
+
