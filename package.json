@@ -1,0 +1,12 @@
+"name':final,
+"version":"1.0.0",
+"description": "",
+"main": "restAPI_dev.js",
+"scripts":{
+"start": "node restAPI_dev.js"
+},
+"author": "",
+"license":"ISC",
+"dependencies":{
+  "express": "^4.17.1"
+}
